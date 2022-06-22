@@ -111,3 +111,26 @@ console.log(res);
 str = 'var_test_text'
 words = str.split('_').reverse().join('')
 console.log(words);
+
+
+//⋕js.Pm.SM.Mst.1
+num = 12345;
+arr = String(num).split('');
+
+let sum = 0;
+for (let digit of arr) {
+	sum += +digit;
+}
+
+console.log(sum);
+
+//⋕js.Pm.SM.Mst.2
+num = 12345;
+arr = String(num).split('');
+
+sum = 0;
+for (let digit of arr) {
+	sum += +digit;
+}
+
+console.log(sum);
