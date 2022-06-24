@@ -69,3 +69,69 @@ function delElem(arr, num) {
     return arr;
 }
 console.log(delElem([3, 5, 2, 5], 5));
+
+//⋕js.Pm.UF.Ex.6
+function addToArr(num) {
+    let arr = []
+    for (let i = 0; i < num; i++) {
+        arr.push(i + 1)
+    }
+    return arr
+}
+console.log(addToArr(5));
+
+//⋕js.Pm.UF.Ex.7
+function addToArr2(from, till) {
+    let lenght = till - from + 1
+    let arr = []
+    for (let i = from; i <= till; i++) {
+        arr.push(i)
+    }
+    return arr
+}
+console.log(addToArr2(3, 7));
+
+//⋕js.Pm.UF.Fl.1
+function isEven(arr) {
+    for (let el of arr) {
+        if (el % 2 !== 0) {
+            return false
+        }
+    }
+    return true
+}
+console.log(isEven([2, 4, 5, 8]));
+
+//⋕js.Pm.UF.LO.1
+function func(a, b) {
+    return a == b
+}
+console.log(func(4,4));
+
+//⋕js.Pm.UF.Mst.1
+function func1() {
+	return 3
+}
+function func2() {
+	return 5
+}
+
+console.log( func1() + func2() );
+
+
+//⋕js.Pm.UF.Mst.2
+function sum(arr) {
+	let res = 0;
+	for (let elem of arr) {
+		res += elem;
+	}
+    return res;
+}
+
+console.log(sum([1, 2, 3, 4, 5]));
+
+//⋕js.Pm.FA.FCR.1
+function func3() {
+	return '!';
+}
+console.log(func3);
