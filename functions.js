@@ -135,3 +135,59 @@ function func3() {
 	return '!';
 }
 console.log(func3);
+
+//⋕js.Pm.FA.FA.4
+let arr = [
+	function() {console.log(('1'))},
+	function() {console.log(('2'))},
+	function() {console.log(('3'))},
+];
+for (let func of arr) {
+    func()
+}
+
+//⋕js.Pm.FA.FO.1
+let obj = {
+    func1: function() {return(1);},
+    func2: function() {return(2);},
+    func3: function() {return(3);}
+}
+console.log(obj.func1() + obj.func2() + obj.func3());
+for (let func in obj) {
+    console.log(typeof(func));
+}
+
+//⋕js.Pm.FA.PFAP.6
+let fn = function (func) {
+	console.log(func(3));
+}
+fn(function(num) {
+	return num * num * num;
+});
+
+//⋕js.Pm.FA.PFAP.10
+// function test(arr, func) {
+//     for (let i = 0; i < arr.lenght; i++) {
+//         arr[i] = func(arr[i]);
+//     }
+//     return arr;
+// }
+// let result = test([1,2,3], function(num) {
+//     return num * num;
+// })
+// console.log(result);
+
+//
+function test(arr, func) {
+	for (let i = 0; i < arr.length; i++) {
+		arr[i] = func(arr[i]);
+	}
+	
+	return arr;
+}
+
+let result = test([1, 2, 3, 4, 5], function(num) {
+	return num * num;
+});
+
+console.log(result);
