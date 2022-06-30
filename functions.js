@@ -191,3 +191,32 @@ let result = test([1, 2, 3, 4, 5], function(num) {
 });
 
 console.log(result);
+
+//⋕js.Pm.FA.Clb.1
+function each(arr, callback) {
+	let result = [];
+	
+	for (let elem of arr) {
+		result.push( callback(elem) ); // вызываем функцию-коллбэк
+	}
+	
+	return result;
+}
+
+result = each(['star', 'asos'], function(str) {
+	return str.split('').reverse().join('')
+});
+console.log(result);
+
+//⋕js.Pm.FA.Clb.3
+result = each(['star', 'asos'], function(str) {
+    return str[0].toUpperCase() + str.slice(1)
+});
+console.log(result);
+
+//⋕js.Pm.FA.Clb.4
+function cube(num) {
+	return num ** 3;
+}
+result = each([1, 2, 3, 4, 5], cube)
+console.log(result);
