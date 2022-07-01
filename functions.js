@@ -220,3 +220,30 @@ function cube(num) {
 }
 result = each([1, 2, 3, 4, 5], cube)
 console.log(result);
+
+//⋕js.Pm.FA.AF.1
+// result = every([1, 2, 3, 4, 5], elem => elem > 0)
+
+//⋕js.Pm.FA.Rc.2
+function getSum(arr) {
+	let sum = arr.shift() ** 2
+	
+	if (arr.length !== 0) {
+		sum += getSum(arr);
+	}
+	
+	return sum;
+}
+
+console.log(getSum([1, 2, 3, 4, 5]));
+
+//⋕js.Pm.FA.RMs.1
+function printObj(arr) {
+    let str = ''
+    for (let el of arr) {
+            str += el
+        }
+        console.log(str.replace(/,/g, ''));
+}
+printObj(['a', ['b', 'c', 'd'], ['e', 'f', ['g', ['j', 'k']]]])
+
